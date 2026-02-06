@@ -289,10 +289,6 @@
   text-transform: uppercase;
 }
 
-.block_close {
-
-}
-
 .button_close {
   inline-size: clamp(261px, 249.73px + 3.00vw, 293px);
   height: 38px;
