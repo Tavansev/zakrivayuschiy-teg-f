@@ -201,7 +201,7 @@
   transform: translate(0);
 }
 
-.dialog_container:hover .decorate::after {
+.block_close:hover .decorate::after {
   transform: translate(0);
 }
 
@@ -287,6 +287,10 @@
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+.block_close {
+
 }
 
 .button_close {

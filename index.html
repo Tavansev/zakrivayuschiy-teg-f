@@ -526,7 +526,7 @@
           aria-controls="dialog-id"
         >
           <svg viewBox="0 0 21 21" class="floppy_button_save">
-            <use href="../svg/floppy.svg#floppy"></use>
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
@@ -535,19 +535,21 @@
         <div class="dialog_container">
           <div class="dialog_container__block">
             <svg viewBox="0 0 21 21" class="floppy_dialog_container">
-              <use href="../svg/floppy.svg#floppy" />
+              <use href="./svg/floppy.svg#floppy" />
             </svg>
             <p class="dialog_container__text">
               Вставьте дискету, чтобы продолжить
             </p>
           </div>
-          <button
-            type="button"
-            onclick="window['dialog-id'].close()"
-            class="button button_close decorate"
-          >
-            <span class="button__text">ОК</span>
-          </button>
+          <div class="block_close">
+            <button
+              type="button"
+              onclick="window['dialog-id'].close()"
+              class="button button_close decorate"
+            >
+              <span class="button__text">ОК</span>
+            </button>
+          </div>
         </div>
       </dialog>
     </main>
