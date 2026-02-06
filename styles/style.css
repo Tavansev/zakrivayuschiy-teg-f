@@ -214,7 +214,7 @@
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--secondary-font),sans-serif;
+  font-family: var(--secondary-font), sans-serif;
   font-variation-settings: 'wght'400;
   font-size: 14px;
   text-align: center;
