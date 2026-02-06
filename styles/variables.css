@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --font-family-press: 'PressStart2P', sans-serif;
-    --font-family-inter: 'Inter', sans-serif;
+    --secondary-font: 'PressStart2P';
+    --main-font: 'Inter', sans-serif;
     --font-weight-header-card: 715;
     --font-weight-text-card: 410;
     --gradient-bg-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px), linear-gradient(to bottom, #e7e7e7 0%, #1a1a1a 100%);
