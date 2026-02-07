@@ -5,10 +5,11 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), 'Arial', sans-serif;
-  font-variation-settings: 'wght'410;
+  font-variation-settings: 'wght' 410;
   background-image: var(--gradient-bg-image);
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .header {
@@ -52,7 +53,7 @@
 }
 
 .card_title {
-  font-variation-settings: 'wght'var(--font-weight-header-card);
+  font-variation-settings: 'wght' var(--font-weight-header-card);
   font-size: 18px;
   padding: 4px 10px;
 }
@@ -131,7 +132,7 @@
   flex-direction: column;
   gap: 25px;
   margin: 24px 25px 0;
-  font-variation-settings: 'wght'410;
+  font-variation-settings: 'wght' 410;
   font-size: 18px;
   line-height: 21px;
 }
@@ -193,15 +194,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.card_block__buttons:hover .decorate::after {
-  transform: translate(0);
-}
-
-.block_save:hover .decorate::after {
-  transform: translate(0);
-}
-
-.block_close:hover .decorate::after {
+.decorate:hover::after{
   transform: translate(0);
 }
 
@@ -215,27 +208,24 @@
   position: relative;
   z-index: 2;
   font-family: var(--secondary-font), sans-serif;
-  font-variation-settings: 'wght'400;
+  font-weight: 400;
   font-size: 14px;
   text-align: center;
   color: var(--color-text-animation);
   mix-blend-mode: difference;
 }
 
-.block_save {
+.button_save {
   block-size: clamp(55px, 150.02px + -9.90vw, 84px);
   inline-size: clamp(306px, 297.21px + 2.62vw, 335px);
   margin-block-end: 100px;
-}
-
-.button_save {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
   padding-inline: 18px;
   cursor: pointer;
+  border: 2px solid #000;
+  background-color: #fff;
 }
 
 .floppy_button_save {
@@ -248,11 +238,11 @@
 
 .modal_window[open] {
   display: block;
+  overflow: hidden;
 }
 
 .modal_window {
   position: fixed;
-  inset: 0;
   width: clamp(341px, 336.77px + 1.13vw, 353px);
   padding: 30px 0;
   border: 2px solid #000;
@@ -283,7 +273,7 @@
 
 .dialog_container__text {
   font-family: var(--secondary-font), sans-serif;
-  font-variation-settings: 'wght'400;
+  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -352,8 +342,12 @@
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .sparks {
+.like-icon.is-liked .heart {
   transform-origin: center;
+  animation: pulse 0.3s 0.1s ease-in 1;
+}
+
+.like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in 1;
 }
 

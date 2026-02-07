@@ -518,7 +518,6 @@
           </button>
         </div>
       </article>
-      <div class="block_save">
         <button
           class="button button_save decorate"
           type="button"
@@ -530,7 +529,6 @@
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
-      </div>
       <dialog id="dialog-id" class="modal_window">
         <div class="dialog_container">
           <div class="dialog_container__block">
@@ -541,15 +539,13 @@
               Вставьте дискету, чтобы продолжить
             </p>
           </div>
-          <div class="block_close">
-            <button
-              type="button"
-              onclick="window['dialog-id'].close()"
-              class="button button_close decorate"
-            >
-              <span class="button__text">ОК</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            onclick="window['dialog-id'].close()"
+            class="button button_close decorate"
+          >
+            <span class="button__text">ОК</span>
+          </button>
         </div>
       </dialog>
     </main>
