@@ -194,7 +194,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.decorate:hover::after{
+.decorate:hover::after {
   transform: translate(0);
 }
 
