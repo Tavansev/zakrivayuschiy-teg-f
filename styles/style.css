@@ -5,11 +5,10 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), 'Arial', sans-serif;
-  font-variation-settings: 'wght' 410;
+  font-variation-settings: 'wght'410;
   background-image: var(--gradient-bg-image);
   background-size: cover;
   background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 .header {
@@ -37,6 +36,7 @@
 }
 
 .content {
+  inline-size: var(--size-inline-block);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,16 +44,14 @@
 }
 
 .card {
-  inline-size: var(--size-inline-block);
   display: flex;
   flex-direction: column;
   border: 2px solid #000;
   background-color: #fff;
-  margin-inline: var(--margin-inline-block);
 }
 
 .card_title {
-  font-variation-settings: 'wght' var(--font-weight-header-card);
+  font-variation-settings: 'wght'var(--font-weight-header-card);
   font-size: 18px;
   padding: 4px 10px;
 }
@@ -132,7 +130,7 @@
   flex-direction: column;
   gap: 25px;
   margin: 24px 25px 0;
-  font-variation-settings: 'wght' 410;
+  font-variation-settings: 'wght'410;
   font-size: 18px;
   line-height: 21px;
 }
@@ -216,8 +214,8 @@
 }
 
 .button_save {
-  block-size: clamp(55px, 150.02px + -9.90vw, 84px);
-  inline-size: clamp(306px, 297.21px + 2.62vw, 335px);
+  min-width: 335px;
+  min-height: 55px;
   margin-block-end: 100px;
   display: flex;
   align-items: center;
@@ -284,6 +282,8 @@
   height: 38px;
   padding-block: 11px;
   cursor: pointer;
+  border: 2px solid #000;
+  background-color: #fff;
 }
 
 .contour {
@@ -310,6 +310,12 @@
   transition: fill 0.3s linear;
 }
 
+.like-icon:active .core {
+  fill: #FF0000;
+  opacity: 1;
+  transition: fill 0.3s linear;
+}
+
 .like-icon.is-liked .core {
   fill: #FF0000;
   opacity: 1;
@@ -318,7 +324,14 @@
 
 .like-icon:hover .main-body {
   --animation-fill-color: black;
-  fill: black;
+  fill: var(--animation-fill-color);
+  opacity: 1;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .main-body {
+  --animation-fill-color: #FF0000;
+  fill: var(--animation-fill-color);
   opacity: 1;
   transition: fill 0.3s 0.05s linear;
 }
@@ -381,6 +394,8 @@
   }
 
   .button_save {
+    min-width: 306px;
+    min-height: 84px;
     flex-direction: column;
     padding-block-start: 17px;
   }
